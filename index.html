@@ -37,17 +37,16 @@
 <body id="body">
  <!-- Do your thing!  -->
   <div type="container-fluid">
-
-    <!-- <p id="test">TEstestestest</p> -->
     <form id="number-form">
       <h3>Enter a number:</h3>
-      <input type="number" min=1 required aria-required="true" name="number-input" id="number-input" placeholder=0>
-      <button type="submit">Click to Play!</button>
+      <input type="number" min=1 required aria-required="true" name="number-input" id="number-input" value=15 placeholder=0>
+      <button type="submit" class="hide2" id="button-submit">Click to Play!</button>
+      <button type="button" id="button-reload" class="hide1">Click to play again!</button>
       </form><br>
     <div id="results-div">
       <h3 class="text-secondary">Your result:</h3>
-      <p id="result" class="text-secondary"></p>
-      <button type="button" id="button-reload">Click to play again!</button>
+      <p id="result"></p>
+      <!-- <button type="button" id="button-reload">Click to play again!</button> -->
     </div>
   </div>
 </body>

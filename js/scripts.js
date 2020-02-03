@@ -5,6 +5,8 @@ $(document).ready(function() {
   //console.log('jquery is working');
   $("form#number-form").submit(function(event) {
     //console.log('form has submitted');
+    $("#button-submit").hide();
+    $("#button-reload").show();
 
     let inputValue = $("#number-input").val();
 
@@ -19,8 +21,8 @@ $(document).ready(function() {
         console.log("pong");
         $("#result").append("Pong!<br>");
       } else {
-        console.log("Please try again");
-        $("#result").append(i + "<br>");
+        console.log(i);
+        $("#result").append(`<span class="text-secondary">${i}</span><br>`);
       }
     }
     $("#results-div").show();
