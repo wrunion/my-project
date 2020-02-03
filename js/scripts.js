@@ -7,23 +7,23 @@ $(document).ready(function() {
     //console.log('form has submitted');
 
     let inputValue = $("#number-input").val();
-    //console.log(inputValue);
-    if (inputValue % 15 ===0) {
-      console.log("ping-pong");
-      $("#result").append("Ping Pong!<br>");
-    } else if (inputValue % 3 === 0) {
-      console.log("ping");
-      $("#result").append("Ping!<br>");
-    } else if (inputValue % 5 === 0) {
-      console.log("pong");
-      $("#result").append("Pong!<br>");
-    } else {
-      console.log("Please try again");
-      $("#result").append("Guess again!<br>");
+
+    for (let i = 1; i <= inputValue; i++) {
+      if (i % 15 ===0) {
+        console.log("ping-pong");
+        $("#result").append("Ping Pong!<br>");
+      } else if (i % 3 === 0) {
+        console.log("ping");
+        $("#result").append("Ping!<br>");
+      } else if (i % 5 === 0) {
+        console.log("pong");
+        $("#result").append("Pong!<br>");
+      } else {
+        console.log("Please try again");
+        $("#result").append(i + "<br>");
+      }
     }
     $("#results-div").show();
-
-
 
     //Clear the input field
     let inputArea = document.getElementById("number-input");
@@ -32,6 +32,7 @@ $(document).ready(function() {
     event.preventDefault();
   });
 
+  //Button to reload the page
   $("#button-reload").click(function() {
     location.reload();
   });
