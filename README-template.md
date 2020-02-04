@@ -1,8 +1,8 @@
-# _{Application Name}_
+# _Fancy Fizz Buzz_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _An exercise in looping and branching for Epicodus, 2.8.2020_
 
-#### By _**{List of contributors}**_
+#### By _**Winter A. Runion**_
 
 ## Description
 
@@ -38,4 +38,4 @@ _NOTE: An open source license details how others can use your code. MIT and GPL 
 
 _For additional details on choosing a license for your code, visit GitHub's [Choose a License site](https://choosealicense.com/)._
 
-Copyright (c) 2016 **_{List of contributors or company name}_**
+Copyright (c) 2020 **_Winter A. Runion_**
