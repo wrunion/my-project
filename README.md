@@ -12,8 +12,8 @@ _In each case, the entire number is replaced, not just the target characters. Th
 
 ## Setup/Installation Requirements
 
-* _Play the web app [here](#)._
-* _Check out the scripts used to build the game [here](#)._
+* _Play the web app [here](https://wrunion.github.io/my-project/)._
+* _View the scripts used to build the game [here](https://github.com/wrunion/my-project/blob/master/js/scripts.js)._
 * _No additional libraries or technologies are needed. Simply run the game in any JavaScript-enabled browser!_
 
 ## Specifications
