@@ -6,17 +6,15 @@
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_A web app that asks a user to input a number, and returns a list of numbers up to, and including the given number. Additionally, numbers that contain the integer "3" are replaced with ${string3}, numbers that contain "2" are replaced with ${string2}, and numbers that contain "1" are replaced with ${string1.}_
+
+_In each case, the entire number is replaced, not just the target characters. The result is a list of integers, interspersed with strings at specific locations._
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+* _Play the web app [here](#)._
+* _Check out the scripts used to build the game [here](#)._
+* _No additional libraries or technologies are needed. Simply run the game in any JavaScript-enabled browser!
 
 ## Known Bugs
 
