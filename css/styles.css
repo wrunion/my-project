@@ -13,7 +13,7 @@ h1, h2, h3, h4, p {
   text-align: center;
 }
 
-#button-submit {
+#button-submit, #button-reload {
   margin: 1em 0 1em 0;
 }
 
@@ -22,5 +22,9 @@ h1, h2, h3, h4, p {
 }
 
 .hidden-start {
+  display: none;
+}
+
+#button-reload {
   display: none;
 }
