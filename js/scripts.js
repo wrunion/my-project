@@ -23,13 +23,16 @@ $(document).ready(function() {
     for (let i = 0; i<=inputValue; i++) {
       if (i.toString().includes("3")) {
         console.log(c);
-        
+        $("#result").append(`<ul>${c}</ul>`);
       } else if (i.toString().includes("2")) {
        console.log(b); 
+       $("#result").append(`<ul>${b}</ul>`);
       } else if (i.toString().includes("1")) {
         console.log(a);
+        $("#result").append(`<ul>${a}</ul>`);
       } else {
         console.log(i.toString());
+        $("#result").append(`<ul>${i.toString()}</ul>`);
       }
     }
 
@@ -55,7 +58,7 @@ $(document).ready(function() {
     //Clear the input field
     let inputArea = document.getElementById("number-input");
     inputArea.value = "";
-    //Prevent the form from attempting to send data to a server
+    //Prevent the form from trying & failing to send data to a server. Prevents form submission error.
     event.preventDefault();
     });
 
