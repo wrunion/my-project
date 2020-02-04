@@ -45,14 +45,11 @@ _If you have issues, questions, or concerns, feel free to contact me at winterru
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+* _JavaScript and jQuery_
+* _CSS libraries: [Bootstrap](#), [Semantic UI](#), and [Materialize](#)_
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
-
-_NOTE: An open source license details how others can use your code. MIT and GPL are the most common licenses. An MIT license means your code is free to use by anyone and you are not liable (Rails and jQuery use an MIT license). GPL also indicates free usage of the code but when used, the resulting work MUST be open source (Linux, Git and Wordpress use GPL)._
-
-_For additional details on choosing a license for your code, visit GitHub's [Choose a License site](https://choosealicense.com/)._
+_This code is licensed under the GPL license. This code may be used freely, **but** the resulting work must also be open source._
 
 Copyright (c) 2020 **_Winter A. Runion_**
