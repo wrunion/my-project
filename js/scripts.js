@@ -8,6 +8,7 @@ function returnStrings(number, string1, string2, string3) {
 let a = "TiK";
 let b = "ToK";
 let c = "Now the party don't start 'til I walk in.";
+let d = `I refuse to quote Kubric for any reason, so here's a collection of quotes from a modern day poet laureate instead:`;
 
 //UI Logic
 $(document).ready(function() {
@@ -21,7 +22,10 @@ $(document).ready(function() {
    // $("#result").append(returnStrings(inputValue, a, b, c));
 
     for (let i = 0; i<=inputValue; i++) {
-      if (i.toString().includes("3")) {
+      if (i === 3) {
+        console.log(d);
+        $("#result").append(`<ul>${d}</ul>`);
+      } else if (i.toString().includes("3")) {
         console.log(c);
         $("#result").append(`<ul>${c}</ul>`);
       } else if (i.toString().includes("2")) {
