@@ -1,11 +1,6 @@
-#body {
-  background-color: black;
-  /* color: white; */
+h1, h2, h3, h4, p {
+  text-align: center;
 }
-
-/* #results-div {
-  display: none;
-} */
 
 .hide1 {
   display: none;

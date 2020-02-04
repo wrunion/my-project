@@ -6,46 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>Fancy Fizz Buzz</title>
-
-  <!-- Bootstrap CDN -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+  <title>Loops, Quotes, and Lyrics</title>
 
   <!-- Semantic UI -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
-
   <!-- My custom scripts, fonts, & stylesheet -->
   <script src="js/scripts.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
-
 </head>
 <body id="body">
-  <div type="container-fluid">
+  <div class="ui container">
+      <h1>Winter's Quotes and Lyrics Game</h1>
+      <div class="ui segment">
     <form id="number-form">
-      <h3>Enter a number to get some lyrics or movie quotes!</h3>
+      <h3>Can you guess who said it? Enter a number below to play!</h3>
       <input type="number" min=1 required aria-required="true" name="number-input" id="number-input" value=15 placeholder=0>
       <button type="submit" class="hide2" id="button-submit">Click to Play!</button>
-      <button type="button" id="button-reload" class="hide1">Click to play again!</button>
+      <button type="button" id="button-reload" class="hidden-start">Click to play again!</button>
       </form><br>
-    <div id="results-div">
+    </div>      
+
+    <div id="results-div" class>
       <h3 class="text-secondary">Your result:</h3>
       <p id="result"></p>
-      <!-- <button type="button" id="button-reload">Click to play again!</button> -->
     </div>
-    <div id="guess-div" class="hidden-start">
+    <!-- If MVP is met, then add this functionality -->
+    <!-- <div id="guess-div" class="hidden-start">
         <h3>Can you guess who said it?</h3>
         <input type="dropdown">
-    </div>
+    </div> -->
   </div>
 </body>
 </html>
