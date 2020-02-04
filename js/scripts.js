@@ -1,13 +1,19 @@
 //Business Logic
 
-function returnStrings(string1, string2, string3) {
-  //$("#result").append("returnStrings function is working!");
-  return("it works");
+function returnStrings(number, string1, string2, string3) {
+  return(number + string1 + string2 + string3);
+
+
+
+
+  
 }
 
-function test() {
-  return('hi');
-}
+//Change the below values, based on which skin/theme is being used
+let a = "TiK";
+let b = "ToK";
+let c = "Now the party don't start 'til I walk in.";
+
 
 //UI Logic
 $(document).ready(function() {
@@ -19,8 +25,18 @@ $(document).ready(function() {
 
     let inputValue = $("#number-input").val();
 
-    $("#result").append(test());
-    $("#result").append(returnStrings("a", "b", "c"));
+   // $("#result").append(returnStrings(inputValue, a, b, c));
+
+    for (let i = 0; i<=inputValue; i++) {
+      if (i.includes("3")) {
+        console.log("TiK");
+      } else if (i.includes("2")) {
+        console.log("ToK");
+      } else if (i.includes("1")) {
+        console.log(`Now the party don't start 'til I walk in.`);
+      } else {
+        console.log(i);
+    }
 
     // for (let i = 1; i <= inputValue; i++) {
     //   if (i % 15 ===0) {
