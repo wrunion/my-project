@@ -9,15 +9,12 @@ let a = "TiK";
 let b = "ToK";
 let c = "Now the party don't start 'til I walk in.";
 
-
 //UI Logic
 $(document).ready(function() {
   //console.log('jquery is working');
   $("form#number-form").submit(function(event) {
     //console.log('form has submitted');
-    $("#button-submit").hide();
-    $("#button-reload").show();
-
+    $("#form-start").hide();
     let inputValue = $("#number-input").val();
 
     console.log(typeof inputValue);
@@ -26,6 +23,7 @@ $(document).ready(function() {
     for (let i = 0; i<=inputValue; i++) {
       if (i.toString().includes("3")) {
         console.log(c);
+        
       } else if (i.toString().includes("2")) {
        console.log(b); 
       } else if (i.toString().includes("1")) {
@@ -33,17 +31,6 @@ $(document).ready(function() {
       } else {
         console.log(i.toString());
       }
-      
-      // if (i.includes("1")) {
-      //   console.log(i);
-      // }
-      // if (i.includes("3")) {
-      //   console.log("TiK");
-      // } else if (i.includes("2")) {
-      //   console.log("ToK");
-      // } else if (i.includes("1")) {
-      //   console.log(`Now the party don't start 'til I walk in.`);
-      // } else {
     }
 
     // for (let i = 1; i <= inputValue; i++) {
