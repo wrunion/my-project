@@ -2,11 +2,6 @@
 
 function returnStrings(number, string1, string2, string3) {
   return(number + string1 + string2 + string3);
-
-
-
-
-  
 }
 
 //Change the below values, based on which skin/theme is being used
@@ -25,17 +20,30 @@ $(document).ready(function() {
 
     let inputValue = $("#number-input").val();
 
+    console.log(typeof inputValue);
    // $("#result").append(returnStrings(inputValue, a, b, c));
 
     for (let i = 0; i<=inputValue; i++) {
-      if (i.includes("3")) {
-        console.log("TiK");
-      } else if (i.includes("2")) {
-        console.log("ToK");
-      } else if (i.includes("1")) {
-        console.log(`Now the party don't start 'til I walk in.`);
+      if (i.toString().includes("3")) {
+        console.log(c);
+      } else if (i.toString().includes("2")) {
+       console.log(b); 
+      } else if (i.toString().includes("1")) {
+        console.log(a);
       } else {
-        console.log(i);
+        console.log(i.toString());
+      }
+      
+      // if (i.includes("1")) {
+      //   console.log(i);
+      // }
+      // if (i.includes("3")) {
+      //   console.log("TiK");
+      // } else if (i.includes("2")) {
+      //   console.log("ToK");
+      // } else if (i.includes("1")) {
+      //   console.log(`Now the party don't start 'til I walk in.`);
+      // } else {
     }
 
     // for (let i = 1; i <= inputValue; i++) {
@@ -62,11 +70,11 @@ $(document).ready(function() {
     inputArea.value = "";
     //Prevent the form from attempting to send data to a server
     event.preventDefault();
-  });
+    });
 
   //Button to reload the page
   $("#button-reload").click(function() {
     location.reload();
   });
 
-});
+}); 
