@@ -39,11 +39,12 @@ $(document).ready(function() {
     $("#form-start").hide();
     let input = $("#number-input").val();
 
-    let a = "";
-    let b = "";
-    let c = "";
+    // let a = "";
+    // let b = "";
+    // let c = "";
 
     //Change the below values, based on which theme is being used (can also be made into user inputs)
+
     let a = "TiK";
     let b = "ToK";
     let c = "Now the party don't start 'til I walk in.";
