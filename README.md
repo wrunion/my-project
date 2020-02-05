@@ -1,4 +1,4 @@
-# _Fancy Fizz Buzz_
+# _Loops and Lyrics
 
 #### _An exercise in looping and branching for Epicodus, 2.8.2020_
 
@@ -6,7 +6,7 @@
 
 ## Description
 
-_A web app that asks a user to input a number, and returns a list of numbers up to, and including the given number. Additionally, numbers that contain the integer "3" are replaced with ${string3}, numbers that contain "2" are replaced with ${string2}, and numbers that contain "1" are replaced with ${string1}._
+_A web app that asks a user to input a number, and returns a list of numbers up to, and including the given number. Additionally, numbers that contain the integer "3" are replaced with "TiK", numbers that contain "2" are replaced with "ToK", and numbers that contain "1" are replaced with "Now the party don't start 'til I walk in."_
 
 _In each case, the entire number is replaced, not just the target characters. The result is a list of integers, interspersed with strings at specific locations._
 
@@ -17,8 +17,12 @@ _In each case, the entire number is replaced, not just the target characters. Th
 * _No additional libraries or technologies are needed. Simply run the game in any JavaScript-enabled browser!_
 
 ## Specifications
+|Spec | Input | Output |
+| :---------------------------       | :------------------ | :------------------|
+| **Program gathers user input** | User input: "5" | Output: "5" |
+| **Program returns a range of numbers from 0 to inputted number** | "5" | "0, 1, 2, 3, 4, 5" |
 
-* **Spec**: The program returns a range of numbers from 0 to the users inputted number
+## New section 
   * **Input**: "4"
   * **Output**: "0, 1, 2, 3, 4"
 * **Spec**: Numbers that contain a 3: all digits are replaced (all digits) with ${string3}.
