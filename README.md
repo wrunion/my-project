@@ -21,15 +21,11 @@ _In each case, the entire number is replaced, not just the target characters. Th
 | :---------------------------       | :------------------ | :------------------|
 | **Program gathers user input** | User input: "5" |`5` |
 | **Program returns a range of numbers from 0 to inputted number** | User input: "5" | `0, 1, 2, 3, 4, 5` |
-| **Numbers that contain a 3: all digits are replaced (all digits) with `${string3}`** | User input: "3" |  `0, 1, 2, ${string3}` |
-| **Numbers that contain a 2: all digits are replaced (all digits) with `${string2}`** | User input: "4" | `0, 1, ${string2}, ${string3}, 4` |
-| Numbers that contain a 1: all digits are replaced (all digits) with ${string1}.
-  * **Input**: "4"
-  * **Output**: "0, ${string1}, ${string2}, ${string3}, 4"
-* **Spec**: Specs 2-4 exceptions are written from most to least important. The last exception should apply unless the second exception does, and the same with the second and first.
-  * **Input**: "15"
-  * **Output**: "0, ${string1}, ${string2}, ${string3}, 4, 5, 6, 7, 8, 9, ${string1}, ${string1}, ${string2}, ${string3}, ${string1}, ${string1}"
-* **Spec**: A user should be able to enter a new number and see new results over and over again.
+| **Numbers that contain a 3: all digits are replaced (all digits) with `${string3}`** | User input: "5" |  `0, 1, 2, ${string3}, 4, 5` |
+| **Numbers that contain a 2: all digits are replaced (all digits) with `${string2}`** | User input: "5" | `0, 1, ${string2}, ${string3}, 4, 5` |
+| **Numbers that contain a 1: all digits are replaced (all digits) with `${string1}`** | User input: "5" | `0, ${string1}, ${string2}, ${string3}, 4, 5` |
+| **Specs 3-5 are written from most to least important. The last exception should apply unless the second exception does, and the same with the second and first** | User input: "13" | `0, ${string1}, ${string2}, ${string3}, 4, 5, 6, 7, 8, 9, ${string1}, ${string1}, ${string2}, ${string3}` |
+| **A user should be able to enter a new number and see new results over and over again.** | User input: "3," "1" | First output: `0, ${string1}. ${string2}, ${string3}` Second output: `0, ${string1}`
  
 ## Known Bugs
 
