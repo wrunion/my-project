@@ -39,18 +39,17 @@ $(document).ready(function() {
     $("#form-start").hide();
     let input = $("#number-input").val();
 
-    // let a = "";
-    // let b = "";
-    // let c = "";
+    let a = "";
+    let b = "";
+    let c = "";
 
     //Change the below values, based on which theme is being used (can also be made into user inputs)
+    //If (skin/theme === "kesha") {
+    [a, b, c] = ["TiK", "ToK", "Now the party don't start 'til I walk in."];
 
-    let a = "TiK";
-    let b = "ToK";
-    let c = "Now the party don't start 'til I walk in.";
-
+    
     //Populate results list with the first four unique entries
-    kubricWasAnAbusiveMisogynist();
+    kubricWasAnAbusiveMisogynist(input);
 
     //Use looping and branching logic to fulfill the parameters of the assignment
     actualAssignment(input, a, b, c);
@@ -58,6 +57,25 @@ $(document).ready(function() {
     printArray.forEach(function(e) {
       $("#result-ul").append(`<li>${e}</li>`)
     });
+    // let a = "";
+    // let b = "";
+    // let c = "";
+
+    //Change the below values, based on which theme is being used (can also be made into user inputs)
+
+    // let a = "TiK";
+    // let b = "ToK";
+    // let c = "Now the party don't start 'til I walk in.";
+
+    //Populate results list with the first four unique entries
+    // kubricWasAnAbusiveMisogynist();
+
+    // //Use looping and branching logic to fulfill the parameters of the assignment
+    // actualAssignment(input, a, b, c);
+    // console.log(printArray);
+    // printArray.forEach(function(e) {
+    //   $("#result-ul").append(`<li>${e}</li>`)
+    // });
 
    
 
