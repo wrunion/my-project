@@ -1,4 +1,4 @@
-# _Loops and Lyrics
+# Loops and Lyrics
 
 #### _An exercise in looping and branching for Epicodus, 2.8.2020_
 
@@ -42,6 +42,6 @@ _If you have issues, questions, or concerns, feel free to contact me at winterru
 
 ### License
 
-_This code is licensed under the GPL license. This code may be used freely, **but** the resulting work must also be open source._
+_This code is licensed under the GPL license. This code may be used freely, but the resulting work must also be open source._
 
 Copyright (c) 2020 **_Winter A. Runion_**
