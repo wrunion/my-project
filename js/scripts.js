@@ -2,6 +2,7 @@
 
 let printArray = [];
 
+//Let's get this part out of the way first, so we can get on with the real logic
 function kubricWasAnAbusiveMisogynist() {
   printArray.push("0");
   printArray.push("Beep!");
@@ -9,39 +10,55 @@ function kubricWasAnAbusiveMisogynist() {
   printArray.push(`I refuse to quote Kubric for any reason, so enjoy these inspirational quotes from a modern day poet laureate instead:`);
 }
 
-// function returnStrings(number, a, b, c) {
-//   let firstOne = "First One";
-//   let firstTwo = "First Two";
-//   let firstThree = "Fuck Kubric";
-//   let a = "a"
-//   let b = "b"
-//   let c = "c";
-//   let returnArray = [];
-  
-//   for (let i = 0; i <= number; i++) {
-//     console.log(i);
-//     returnArray.push(i);
-//   }
-//   console.log(returnArray);
-//   return returnArray;
-// }
+//Here's the function that meets the assignment parameters
+function actualAssignment(number, string1, string2, string3) {
+  for (let i = 4; i <= number; i++) {
+    if (i.toString().includes("3")) {
+      printArray.push(string3);
+    } else if (i.toString().includes("2")) {
+      printArray.push(string2);
+    } else if (i.toString().includes("1")) {
+      printArray.push(string1);
+    } else {
+      printArray.push(i.toString());
+    }
+  }
+}
 
-//Change the below values, based on which skin/theme is being used
-// let a = "TiK";
-// let b = "ToK";
-// let c = "Now the party don't start 'til I walk in.";
-// let d = `I refuse to quote Kubric for any reason, so here's a collection of quotes from a modern day poet laureate instead:`;
+//Declare strings that will be used to populate the ul
+// let a = "";
+// let b = "";
+// let c = "";
 
 //UI Logic
 $(document).ready(function() {
-  //console.log('jquery is working');
-  $("form#number-form").submit(function(event) {
-    //console.log('form has submitted');
-    $("#form-start").hide();
-    let inputValue = $("#number-input").val();
 
-    console.log(typeof inputValue);
-   // $("#result").append(returnStrings(inputValue, a, b, c));
+  //Write a function to check the skin
+  //let skin = $("body")
+  $("form#number-form").submit(function(event) {
+    $("#form-start").hide();
+    let input = $("#number-input").val();
+
+    let a = "";
+    let b = "";
+    let c = "";
+
+    //Change the below values, based on which theme is being used (can also be made into user inputs)
+    let a = "TiK";
+    let b = "ToK";
+    let c = "Now the party don't start 'til I walk in.";
+
+    //Populate results list with the first four unique entries
+    kubricWasAnAbusiveMisogynist();
+
+    //Use looping and branching logic to fulfill the parameters of the assignment
+    actualAssignment(input, a, b, c);
+    console.log(printArray);
+    printArray.forEach(function(e) {
+      $("#result-ul").append(`<li>${e}</li>`)
+    });
+
+   
 
     // for (let i = 0; i<=inputValue; i++) {
     //   if (i === 3) {
@@ -64,12 +81,7 @@ $(document).ready(function() {
 
     //returnStrings(10);
 
-    kubricWasAnAbusiveMisogynist();
-    console.log(printArray);
-
-    printArray.forEach(function(e) {
-      $("#result-ul").append(`<li>${e}</li>`)
-    });
+  
 
     $("#results-div").show();
 
