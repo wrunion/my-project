@@ -22,7 +22,7 @@ function kubricWasAnAbusiveMisogynist(number) {
   if (number <=3) {
     for (let i = 0; i <= number; i++) {
       if (i.toString().includes("3")) {
-        printArray.push("I refuse to quote Kubric for any reason, so enjoy these inspirational quotes from a modern day poet laureate instead:");
+        printArray.push("(Insert brogrammer in-joke that makes everyone else feel uncomfortable here)");
       } else if (i.toString().includes("2")) {
         printArray.push("Boop!");
       } else if (i.toString().includes("1")) {
