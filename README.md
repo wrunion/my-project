@@ -19,19 +19,11 @@ _In each case, the entire number is replaced, not just the target characters. Th
 ## Specifications
 |Spec | Input | Output |
 | :---------------------------       | :------------------ | :------------------|
-| **Program gathers user input** | User input: "5" | Output: "5" |
-| **Program returns a range of numbers from 0 to inputted number** | "5" | "0, 1, 2, 3, 4, 5" |
-
-## New section 
-  * **Input**: "4"
-  * **Output**: "0, 1, 2, 3, 4"
-* **Spec**: Numbers that contain a 3: all digits are replaced (all digits) with ${string3}.
-  * **Input**: "3"
-  * **Output**: "0, 1, 2, ${string3}"
-* **Spec**: Numbers that contain a 2: all digits are replaced (all digits) with ${string2}.
-  * **Input**: "4"
-  * **Output**: "0, 1, ${string2}, ${string3}, 4"
-* **Spec**: Numbers that contain a 1: all digits are replaced (all digits) with ${string1}.
+| **Program gathers user input** | User input: "5" |`5` |
+| **Program returns a range of numbers from 0 to inputted number** | User input: "5" | `0, 1, 2, 3, 4, 5` |
+| **Numbers that contain a 3: all digits are replaced (all digits) with `${string3}`** | User input: "3" |  `0, 1, 2, ${string3}` |
+| **Numbers that contain a 2: all digits are replaced (all digits) with `${string2}`** | User input: "4" | `0, 1, ${string2}, ${string3}, 4` |
+| Numbers that contain a 1: all digits are replaced (all digits) with ${string1}.
   * **Input**: "4"
   * **Output**: "0, ${string1}, ${string2}, ${string3}, 4"
 * **Spec**: Specs 2-4 exceptions are written from most to least important. The last exception should apply unless the second exception does, and the same with the second and first.
