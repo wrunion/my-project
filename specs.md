@@ -11,7 +11,7 @@ These exceptions are written from least to most important. The first exception s
 
 The number 13 should be replaced with "I'm sorry, Dave. I'm afraid I can't do that."
 The number 21 should be replaced with "Boop".
-The number 32 should be replaced with "I'm sorry, Dave. I'm afraid I can't do that."
+The number 32 should be replaced with "(Insert brogrammer movie quote here)."
 A user should be able to enter a new number and see new results over and over again.
 
 Example: If a user inputs a 5, the program should display a list of values: "0", "Beep!", "Boop", "I'm Sorry...", 4, 5
