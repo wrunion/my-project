@@ -2,27 +2,7 @@
 
 let printArray = [];
 
-function kubricWasAnAbusiveMisogynist(number) {
-  //If this is the only function being called by the user:
-  if (number <=3) {
-    for (let i = 0; i <= number; i++) {
-      if (i.toString().includes("3")) {
-        printArray.push("I refuse to quote Kubric for any reason, so enjoy these inspirational quotes from a modern day poet laureate instead:");
-      } else if (i.toString().includes("2")) {
-        printArray.push("Boop!");
-      } else if (i.toString().includes("1")) {
-        printArray.push("Beep!");
-      } else {
-        printArray.push(i.toString());
-      }
-    }
-  //If this is just a precursor to the main fuction:
-  } else {
-    printArray = [0, "Beep!", "Boop!", "I refuse to quote Kubric for any reason, so enjoy these inspirational quotes from a modern day poet laureate instead:"];
-  } 
-}
-
-//Here's the function that meets the assignment parameters
+//Here's the function that meets the assignment parameters, and is reusable for various string inputs
 function actualAssignment(number, string1, string2, string3) {
   for (let i = 4; i <= number; i++) {
     if (i.toString().includes("3")) {
@@ -37,16 +17,37 @@ function actualAssignment(number, string1, string2, string3) {
   }
 }
 
-//Declare strings that will be used to populate the ul
-// let a = "";
-// let b = "";
-// let c = "";
+//Here's my snarky function that handles (up to) the first four values in my return list
+function kubricWasAnAbusiveMisogynist(number) {
+  if (number <=3) {
+    for (let i = 0; i <= number; i++) {
+      if (i.toString().includes("3")) {
+        printArray.push("I refuse to quote Kubric for any reason, so enjoy these inspirational quotes from a modern day poet laureate instead:");
+      } else if (i.toString().includes("2")) {
+        printArray.push("Boop!");
+      } else if (i.toString().includes("1")) {
+        printArray.push("Beep!");
+      } else {
+        printArray.push(i.toString());
+      }
+    }
+  } else {
+    for (let i = 0; i <= 3; i++) {
+      if (i.toString().includes("3")) {
+        printArray.push("I refuse to quote Kubric for any reason, so enjoy these inspirational quotes from a modern day poet laureate instead:");
+      } else if (i.toString().includes("2")) {
+        printArray.push("Boop!");
+      } else if (i.toString().includes("1")) {
+        printArray.push("Beep!");
+      } else {
+        printArray.push(i.toString());
+      }
+    }
+  } 
+}
 
 //UI Logic
 $(document).ready(function() {
-
-  //Write a function to check the skin
-  //let skin = $("body")
   $("form#number-form").submit(function(event) {
     $("#form-start").hide();
     let input = $("#number-input").val();
@@ -55,70 +56,25 @@ $(document).ready(function() {
     let b = "";
     let c = "";
 
-    //Change the below values, based on which theme is being used (can also be made into user inputs)
-    //If (skin/theme === "kesha") {
-    [a, b, c] = ["TiK", "ToK", "Now the party don't start 'til I walk in."];
-
+    //Stretch goal #1: Set the three string values via user input 
     
-    //Populate results list with the first four unique entries
+    //Stretch goal #2: Create multiple themes, and change the string values, based on which theme is being used 
+
+    //For example, if (theme === "kesha") {
+    [a, b, c] = ["TiK", "ToK", "Now the party don't start 'til I walk in."];
+    //}
+    
+    //Populate results list with the first (up to) four unique entries
     kubricWasAnAbusiveMisogynist(input);
 
-    //Use looping and branching logic to fulfill the parameters of the assignment
+    //Use looping and branching to fulfill the parameters of the assignment
     actualAssignment(input, a, b, c);
-    console.log(printArray);
     printArray.forEach(function(e) {
       $("#result-ul").append(`<li>${e}</li>`)
     });
-    // let a = "";
-    // let b = "";
-    // let c = "";
-
-    //Change the below values, based on which theme is being used (can also be made into user inputs)
-
-    // let a = "TiK";
-    // let b = "ToK";
-    // let c = "Now the party don't start 'til I walk in.";
-
-    //Populate results list with the first four unique entries
-    // kubricWasAnAbusiveMisogynist();
-
-    // //Use looping and branching logic to fulfill the parameters of the assignment
-    // actualAssignment(input, a, b, c);
-    // console.log(printArray);
-    // printArray.forEach(function(e) {
-    //   $("#result-ul").append(`<li>${e}</li>`)
-    // });
-
-   
-
-    // for (let i = 0; i<=inputValue; i++) {
-    //   if (i === 3) {
-    //     console.log(d);
-    //     $("#result").append(`<ul>${d}</ul>`);
-    //   } else if (i.toString().includes("3")) {
-    //     console.log(c);
-    //     $("#result").append(`<ul>${c}</ul>`);
-    //   } else if (i.toString().includes("2")) {
-    //    console.log(b); 
-    //    $("#result").append(`<ul>${b}</ul>`);
-    //   } else if (i.toString().includes("1")) {
-    //     console.log(a);
-    //     $("#result").append(`<ul>${a}</ul>`);
-    //   } else {
-    //     console.log(i.toString());
-    //     $("#result").append(`<ul>${i.toString()}</ul>`);
-    //   }
-    // }
-
-    //returnStrings(10);
-
-  
 
     $("#results-div").show();
 
-    //Clear the input field
-    let inputArea = document.getElementById("number-input");
-    inputArea.value = "";
     //Prevent the form from trying & failing to send data to a server. Prevents form submission error.
     event.preventDefault();
     });
