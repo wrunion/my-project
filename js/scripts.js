@@ -1,7 +1,24 @@
 //Business Logic
 
 function returnStrings(number, string1, string2, string3) {
-  return(number + string1 + string2 + string3);
+
+  for (let i = 0; i<=number; i++) {
+    if (i.toString().includes("3")) {
+      console.log(c);
+      return `<li class="full-quote">${c}</li>`;
+    } else if (i.toString().includes("2")) {
+     console.log(b); 
+     return `<li class="tok">${b}</li>`;
+    } else if (i.toString().includes("1")) {
+      console.log(a);
+      $("#result").append(`<li class="tik">${a}</li>`);
+    } else {
+      console.log(i.toString());
+      $("#result").append(`<ul>${i.toString()}</ul>`);
+    }
+  }
+
+  //return(number + string1 + string2 + string3);
 }
 
 //Change the below values, based on which skin/theme is being used
@@ -22,10 +39,7 @@ $(document).ready(function() {
    // $("#result").append(returnStrings(inputValue, a, b, c));
 
     for (let i = 0; i<=inputValue; i++) {
-      if (i === 3) {
-        console.log(d);
-        $("#result").append(`<ul>${d}</ul>`);
-      } else if (i.toString().includes("3")) {
+        if (i.toString().includes("3")) {
         console.log(c);
         $("#result").append(`<ul>${c}</ul>`);
       } else if (i.toString().includes("2")) {

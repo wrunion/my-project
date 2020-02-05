@@ -3,7 +3,7 @@
 }
 
 #title {
-  margin: 1em 0 1em 0;
+  margin: 1em 0 .5em 0;
 }
 h1, h2, h3, h4, p {
   text-align: center;
@@ -23,4 +23,9 @@ h1, h2, h3, h4, p {
 
 .hidden-start {
   display: none;
+}
+
+#intro-p {
+  font-style: italic;
+  margin-bottom: 2em;
 }
