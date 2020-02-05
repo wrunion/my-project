@@ -2,12 +2,24 @@
 
 let printArray = [];
 
-//Let's get this part out of the way first, so we can get on with the real logic
-function kubricWasAnAbusiveMisogynist() {
-  printArray.push("0");
-  printArray.push("Beep!");
-  printArray.push("Boop!");
-  printArray.push(`I refuse to quote Kubric for any reason, so enjoy these inspirational quotes from a modern day poet laureate instead:`);
+function kubricWasAnAbusiveMisogynist(number) {
+  //If this is the only function being called by the user:
+  if (number <=3) {
+    for (let i = 0; i <= number; i++) {
+      if (i.toString().includes("3")) {
+        printArray.push("I refuse to quote Kubric for any reason, so enjoy these inspirational quotes from a modern day poet laureate instead:");
+      } else if (i.toString().includes("2")) {
+        printArray.push("Boop!");
+      } else if (i.toString().includes("1")) {
+        printArray.push("Beep!");
+      } else {
+        printArray.push(i.toString());
+      }
+    }
+  //If this is just a precursor to the main fuction:
+  } else {
+    printArray = [0, "Beep!", "Boop!", "I refuse to quote Kubric for any reason, so enjoy these inspirational quotes from a modern day poet laureate instead:"];
+  } 
 }
 
 //Here's the function that meets the assignment parameters
