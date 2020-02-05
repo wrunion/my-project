@@ -1,62 +1,81 @@
 //Business Logic
 
-function returnStrings(number, string1, string2, string3) {
+let printArray = [];
 
-  for (let i = 0; i<=number; i++) {
+//Here's the function that meets the assignment parameters, and is reusable for various string inputs
+function actualAssignment(number, string1, string2, string3) {
+  for (let i = 4; i <= number; i++) {
     if (i.toString().includes("3")) {
-      console.log(c);
-      return `<li class="full-quote">${c}</li>`;
+      printArray.push(string3);
     } else if (i.toString().includes("2")) {
-     console.log(b); 
-     return `<li class="tok">${b}</li>`;
+      printArray.push(string2);
     } else if (i.toString().includes("1")) {
-      console.log(a);
-      $("#result").append(`<li class="tik">${a}</li>`);
+      printArray.push(string1);
     } else {
-      console.log(i.toString());
-      $("#result").append(`<ul>${i.toString()}</ul>`);
+      printArray.push(i.toString());
     }
   }
-
-  //return(number + string1 + string2 + string3);
 }
 
-//Change the below values, based on which skin/theme is being used
-let a = "TiK";
-let b = "ToK";
-let c = "Now the party don't start 'til I walk in.";
+//Here's my snarky function that handles (up to) the first four values in my return list
+function kubricWasAnAbusiveMisogynist(number) {
+  if (number <=3) {
+    for (let i = 0; i <= number; i++) {
+      if (i.toString().includes("3")) {
+        printArray.push("I refuse to quote Kubric for any reason, so enjoy these inspirational quotes from a modern day poet laureate instead:");
+      } else if (i.toString().includes("2")) {
+        printArray.push("Boop!");
+      } else if (i.toString().includes("1")) {
+        printArray.push("Beep!");
+      } else {
+        printArray.push(i.toString());
+      }
+    }
+  } else {
+    for (let i = 0; i <= 3; i++) {
+      if (i.toString().includes("3")) {
+        printArray.push("I refuse to quote Kubric for any reason, so enjoy these inspirational quotes from a modern day poet laureate instead:");
+      } else if (i.toString().includes("2")) {
+        printArray.push("Boop!");
+      } else if (i.toString().includes("1")) {
+        printArray.push("Beep!");
+      } else {
+        printArray.push(i.toString());
+      }
+    }
+  } 
+}
+
 
 //UI Logic
 $(document).ready(function() {
-  //console.log('jquery is working');
   $("form#number-form").submit(function(event) {
-    //console.log('form has submitted');
-    $("#button-submit").hide();
-    let inputValue = $("#number-input").val();
+    $("#form-start").hide();
+    let input = $("#number-input").val();
 
-    //THIS WORKS. BUT I'M GONNA TRY SOMETHING DIFFERENT.
-    for (let i = 0; i<=inputValue; i++) {
-        if (i.toString().includes("3")) {
-        console.log(c);
-        $("#result").append(`<ul>${c}</ul>`);
-      } else if (i.toString().includes("2")) {
-       console.log(b); 
-       $("#result").append(`<ul>${b}</ul>`);
-      } else if (i.toString().includes("1")) {
-        console.log(a);
-        $("#result").append(`<ul>${a}</ul>`);
-      } else {
-        console.log(i.toString());
-        $("#result").append(`<ul>${i.toString()}</ul>`);
-      }
-    }
+    let a = "";
+    let b = "";
+    let c = "";
 
+    //Stretch goal #1: Set the three string values via user input 
+    
+    //Stretch goal #2: Create multiple themes, and change the string values, based on which theme is being used 
+
+    //For example, if (theme === "kesha") {
+    [a, b, c] = ["TiK", "ToK", "Now the party don't start 'til I walk in."];
+    //}
+    
+    //Populate results list with the first (up to) four unique entries
+    kubricWasAnAbusiveMisogynist(input);
+
+    //Use looping and branching to fulfill the parameters of the assignment
+    actualAssignment(input, a, b, c);
+    printArray.forEach(function(e) {
+      $("#result-ul").append(`<li>${e}</li>`)
+    });
 
     $("#results-div").show();
 
-    //Clear the input field
-    // let inputArea = document.getElementById("number-input");
-    // inputArea.value = "";
     //Prevent the form from trying & failing to send data to a server. Prevents form submission error.
     event.preventDefault();
     });
