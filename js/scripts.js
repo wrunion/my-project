@@ -46,6 +46,7 @@ function kubricWasAnAbusiveMisogynist(number) {
   } 
 }
 
+
 //UI Logic
 $(document).ready(function() {
   $("form#number-form").submit(function(event) {
