@@ -19,23 +19,23 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body id="body">
-  <div class="ui container" id="main">
+  <div class="ui container ui raised segment" id="main">
       <h1 id="title">Winter's Loops and Lyrics</h1>
-      <p id="intro-p">Note: I refuse to quote Stanley Kubric for any reason, so please enjoy this collection of quotes from a modern day poet laureate instead:</p>
-    <div class="ui segment" id="form-start">
+      <p id="intro-p" class="grey-text">Note: I refuse to quote Stanley Kubric for any reason, so please enjoy this collection of quotes from a modern day poet laureate instead:</p>
+    <div id="form-start">
     <form id="number-form">
       <h3>Enter a number below to play!</h3>
       <div class="fluid ui input">
          <input type="number" min=1 required aria-required="true" name="number-input" id="number-input" value=15>
       </div>
-      <button type="submit" class="hide2 fluid ui violet button large" id="button-submit">Click to Play!</button>
+      <button type="submit" class="hide2 fluid ui basic violet button large" id="button-submit">Click to Play!</button>
       </form><br>
     </div>      
 
-    <div id="results-div" class="hidden-start ui segment">
-      <h3 class="text-secondary">Your result:</h3>
+    <div id="results-div" class="hidden-start">
+      <!-- <h3 class="text-secondary">Your result:</h3> -->
       <ul id="result"></ul>
-      <button type="button" id="button-reload" class="fluid ui teal button large">Click to play again!</button>
+      <button type="button" id="button-reload" class="fluid ui violet button large">Click to play again!</button>
     </div>
     <!-- If MVP is met, then add this functionality -->
     <!-- <div id="guess-div" class="hidden-start">

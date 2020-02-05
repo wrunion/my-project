@@ -25,19 +25,16 @@ function returnStrings(number, string1, string2, string3) {
 let a = "TiK";
 let b = "ToK";
 let c = "Now the party don't start 'til I walk in.";
-let d = `I refuse to quote Kubric for any reason, so here's a collection of quotes from a modern day poet laureate instead:`;
 
 //UI Logic
 $(document).ready(function() {
   //console.log('jquery is working');
   $("form#number-form").submit(function(event) {
     //console.log('form has submitted');
-    $("#form-start").hide();
+    $("#button-submit").hide();
     let inputValue = $("#number-input").val();
 
-    console.log(typeof inputValue);
-   // $("#result").append(returnStrings(inputValue, a, b, c));
-
+    //THIS WORKS. BUT I'M GONNA TRY SOMETHING DIFFERENT.
     for (let i = 0; i<=inputValue; i++) {
         if (i.toString().includes("3")) {
         console.log(c);
@@ -54,28 +51,12 @@ $(document).ready(function() {
       }
     }
 
-    // for (let i = 1; i <= inputValue; i++) {
-    //   if (i % 15 ===0) {
-    //     console.log("ping-pong");
-    //     $("#result").append("Ping Pong!<br>");
-    //   } else if (i % 3 === 0) {
-    //     console.log("ping");
-    //     $("#result").append("Ping!<br>");
-    //   } else if (i % 5 === 0) {
-    //     console.log("pong");
-    //     $("#result").append("Pong!<br>");
-    //   } else {
-    //     console.log(i);
-    //     $("#result").append(`<span class="text-secondary">${i}</span><br>`);
-    //   }
-    // }
-
 
     $("#results-div").show();
 
     //Clear the input field
-    let inputArea = document.getElementById("number-input");
-    inputArea.value = "";
+    // let inputArea = document.getElementById("number-input");
+    // inputArea.value = "";
     //Prevent the form from trying & failing to send data to a server. Prevents form submission error.
     event.preventDefault();
     });
